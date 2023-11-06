@@ -1,0 +1,15 @@
+// toggle class active
+const navbarNav = document.queryselector(".navbar-nav");
+// ketika hamburger menu di klik document.
+queryselector("#hambureger-menu").onclik = () => {
+  navbarNav.classlist.toggle("active");
+};
+
+// klik di luar sidebar untuk menghilangkan nav
+const hambureger = document.queryselector("#hambureger-menu");
+
+document.addEventListener("click", function (e) {
+  if (!hambureger.contains(e.target) && !navbarNav.contains(e.target)) {
+    navbarNav.classlist.remove("active");
+  }
+});
